@@ -1,0 +1,71 @@
+{% extends "../layouts/base.twig" %}
+
+{% block style %}
+	<link rel="stylesheet" href="./assets/style/displayComputer.css">
+{% endblock style %}
+
+{% block main %}
+	<section class="container-computer">
+		<h2 class="container-computer__title">{{ title }}</h2>
+		<a href="#" class="container-computer__add-button">Ajouter un ordinateur</a>
+		{% if listComputers|length == 0 %}
+			<p>Il n'y a pas encore d'ordinateur enregistré dans votre entreprise</p>
+		{% else %}
+			<ul>
+				<li>
+					<span>Adresse Mac</span>
+					<span>Assigné à :</span>
+				</li>
+				{% for computer in listComputers %}
+					<li>
+						<span>{{ computer.macAddress }}</span>
+						<span>
+							{% if computer.employee %}
+								{{ computer.employee.lastName }}
+								{{ computer.employee.firstName }}
+							{% else %}
+								Aucun
+							{% endif %}
+						</span>
+						<a class="update-link" data-id="{{ computer.id }}" href="#">Modifier</a>
+						<a class="delete-link" href="/deleteComputer/{{computer.id}}">Supprimer</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		<div class="container-home__update-computer">
+			<div class="update-computer__background"></div>
+			<form class="" method="post" action="/updateComputer/{{ computer.id }}">
+				<input type="text" name="macAddress" placeholder="Adresse MAC" value="{{ computer.macAddress }}">
+				<select name="employeeId">
+					<option value="">Aucun employé</option>
+					{% for employee in listEmployees %}
+						<option value="{{ employee.id }}">{{ employee.firstName }}
+							{{ employee.lastName }}</option>
+					{% endfor %}
+				</select>
+				<input type="hidden" name="id" value="{{ computer.id }}">
+				<button type="submit" name="export">Modifier l'ordinateur</button>
+			</form>
+		</div>
+		<div class="container-home__add-computer">
+			<div class="add-computer__background"></div>
+			<form class="" method="post" action="/addComputer">
+				<input type="text" name="macAddress" placeholder="Adresse MAC" required>
+				<select name="employeeId">
+					<option value="">Aucun employé</option>
+					{% for employee in listEmployees %}
+						<option value="{{ employee.id }}">{{ employee.firstName }}
+							{{ employee.lastName }}</option>
+					{% endfor %}
+				</select>
+				<input type="hidden" name="id" value="{{ computer.id }}">
+				<button type="submit" name="export">Ajouter l'ordinateur</button>
+			</form>
+		</div>
+	</section>
+{% endblock main %}
+
+{% block script %}
+	<script src="./assets/script/displayComputer.js" defer></script>
+{% endblock script %}

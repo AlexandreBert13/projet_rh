@@ -1,0 +1,52 @@
+{% extends "../layouts/base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="./assets/style/home.css">
+{% endblock style %}
+
+{% block main %}
+	<section class="container-home">
+		<h2 class="container-home__title">{{ title }}</h2>
+		<h3 class="container-home__subtitle">Bienvenue sur la page de l'entreprise <span>{{ company.name }}</span></h3>
+		<h4>Liste des employés :</h3>
+		{% if listEmployees|length == 0 %}
+			<p>Il n'y a pas encore d'employés dans votre entreprise.</p>
+		{% else %}
+			<ul>
+				<li>
+					<span>Prénom</span>
+					<span>Nom</span>
+					<span class="mail">Mail</span>
+					<span class="age">Âge</span>
+					<span>Genre</span>
+				</li>
+				{% for employee in listEmployees %}
+					<li>
+						<span>{{ employee.firstName }}</span>
+						<span>{{ employee.lastName }}</span>
+						<span class="mail">{{ employee.mail }}</span>
+						<span class='age'>{{ employee.age }}</span>
+						<span>{{ employee.gender }}</span>
+						<a class="update-link" data-id="{{ employee.id }}" href="#">Modifier</a>
+						<a class="delete-link" href="/deleteEmployee/{{employee.id}}">Supprimer</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		<div class="container-home__update-employee">
+			<div class="update-employee__background"></div>
+			<form class="" method="post" action="/updateEmployee/{{ employee.id }}">
+				<input type="text" name="firstName" placeholder="Prénom" value="{{ employee.firstName }}">
+				<input type="text" name="lastName" placeholder="Nom" value="{{ employee.lastName }}">
+				<input type="email" name="mail" placeholder="Mail" value="{{ employee.mail }}">
+				<input type="number" name="age" placeholder="Âge" value="{{ employee.age }}">
+				<input type="text" name="gender" placeholder="Genre" value="{{ employee.gender }}">
+				<input type="hidden" name="id" value="{{ employee.id }}">	
+				<button type="submit"  name="export">Modifier l'employé</button>
+			</form>
+		</div>
+	</section>
+{% endblock main %}
+
+{% block script %}
+	<script src="./assets/script/home.js" defer></script>
+{% endblock script %}

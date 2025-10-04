@@ -1,0 +1,201 @@
+.container-computer {
+  width: 70%;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.container-computer__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #03203E;
+}
+.container-computer .container-computer__add-button {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #03203E;
+  color: #F4F7FA;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.container-computer ul {
+  border: 2px solid #03203E;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.4509803922);
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container-computer ul li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+.container-computer ul li:last-child {
+  border-bottom: none;
+}
+.container-computer ul li span {
+  font-weight: 600;
+  color: #03203E;
+  display: inline-block;
+  width: 30%;
+  max-width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+.container-computer ul li a {
+  color: #03203E;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+}
+.container-computer ul li a:hover {
+  text-decoration: underline;
+}
+.container-computer ul li a.delete-link {
+  color: #e74c3c;
+}
+.container-computer ul li a.update-link {
+  color: #f39c12;
+}
+.container-computer .update-computer__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0.5;
+}
+.container-computer .container-home__update-computer {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.container-computer .container-home__update-computer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  z-index: 2;
+  position: relative;
+  left: 50%;
+  top: 25%;
+  transform: translateX(0%);
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #03203E;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #F4F7FA;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.container-computer .container-home__update-computer form label {
+  font-weight: 600;
+  color: #03203E;
+}
+.container-computer .container-home__update-computer form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.container-computer .container-home__update-computer form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: field;
+  color: #000;
+}
+.container-computer .container-home__update-computer form button {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #03203E;
+  color: #F4F7FA;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.container-computer .add-computer__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0.5;
+}
+.container-computer .container-home__add-computer {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.container-computer .container-home__add-computer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  z-index: 2;
+  position: relative;
+  left: 50%;
+  top: 25%;
+  transform: translateX(0%);
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #03203E;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #F4F7FA;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.container-computer .container-home__add-computer form label {
+  font-weight: 600;
+  color: #03203E;
+}
+.container-computer .container-home__add-computer form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.container-computer .container-home__add-computer form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: field;
+  color: #000;
+}
+.container-computer .container-home__add-computer form button {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #03203E;
+  color: #F4F7FA;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}/*# sourceMappingURL=displayComputer.css.map */

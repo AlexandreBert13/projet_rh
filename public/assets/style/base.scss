@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+$white-color: #F4F7FA;
+$dark-blue : #03203E;
+
+body {
+    font-family: "Roboto", sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $white-color;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+
+        .container-header {
+            width: 100%;
+            height: auto;
+            display: flex;
+
+
+            .container-header__title {
+                font-size: 1.5rem;
+                padding: 1rem;
+                text-align: left;
+            }
+
+            .container-header__nav {
+                margin-top: 0;
+                justify-content: flex-end;
+                width: 100%;
+                align-items: center;
+                margin-right: 1rem;
+
+                .nav__menu {
+                    display: none;
+                    flex-direction: column;
+                    background-color: $dark-blue;
+                    position: absolute;
+                    top: 3rem;
+                    right: 0;
+                    width: 100%;
+                    text-align: center;
+
+                    li {
+                        margin: 1.3rem 0;
+                    }
+                }
+
+                .nav__menu.active {
+                    display: block;
+                }
+            }
+
+            .nav__hamburger {
+                display: block !important;
+            }
+        }
+
+        .container-login,
+        .container-home,
+        .container-computer,
+        .container-employee,
+        .container-add-employee,
+        .container-create-employee,
+        .container-create-company
+        {
+            width: 100%;
+            padding: 1rem;
+
+            ul {
+                font-size: 65%;
+
+                li {
+                    span {
+                        width: 14% !important;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                    }
+
+                    .mail {
+                        width: 26% !important;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                    }
+                }
+            }
+
+            .container-home__update-employee,
+            .container-home__add-computer,
+            .container-home__update-computer
+            {
+                form {
+                    left: 10% !important;
+                }
+            }
+
+            .update-link {
+                font-size: 0;
+                background: url('../img/update.png') no-repeat center;
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                margin: 0 5px;
+            }
+
+            .delete-link {
+                font-size: 0;
+                background: url('../img/delete.png') no-repeat center;
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+            }
+        }
+
+        .container-computer {
+            ul {
+                li {
+                    span {
+                        width: 40% !important;
+                    }
+                }
+            }
+        }
+    }
+}

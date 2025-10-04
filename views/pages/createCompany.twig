@@ -1,0 +1,18 @@
+{% extends "../layouts/base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="./assets/style/createCompany.css">
+{% endblock style %}
+
+{% block main %}
+	<section class="container-create-company">
+		<h2 class="container-create-company__title">{{ title }}</h2>
+		<form method="post" action="./createCompany">
+			<input type="text" name="name" placeholder="Le nom d'entreprise">
+			<input type="number" maxlength="14" minlength="14" name="siret" placeholder="Le numéro de Siret">
+			<input type="password" name="password" placeholder="Votre mot de passe">
+			<input type="password" name="confirm" placeholder="Validez votre mot de passe">
+			<input type="text" name="owner" placeholder="Le chef d'entreprise (optionnel)">
+			<button type="submit">Ajouter</button>
+		</form>
+	</section>
+{% endblock main %}

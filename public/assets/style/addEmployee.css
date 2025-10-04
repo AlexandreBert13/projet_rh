@@ -1,0 +1,41 @@
+.container-create-employee {
+  width: 70%;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-create-employee__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.container-create-employee form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+}
+.container-create-employee form input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.container-create-employee form input:focus {
+  border-color: #03203E;
+  outline: none;
+}
+.container-create-employee form button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  color: #F4F7FA;
+  background-color: #03203E;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container-create-employee form button:hover {
+  background-color: #021524;
+}/*# sourceMappingURL=addEmployee.css.map */

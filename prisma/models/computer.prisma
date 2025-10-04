@@ -1,0 +1,8 @@
+model Computer {
+    id Int @id @default(autoincrement())
+    macAddress String @db.VarChar(255) @unique
+    company Company @relation(fields: [companyId], references: [id])
+    companyId Int
+    employee Employee? @relation(fields: [employeeId], references: [id])
+    employeeId Int?
+}

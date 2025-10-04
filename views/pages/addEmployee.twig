@@ -1,0 +1,20 @@
+{% extends "../layouts/base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="./assets/style/addEmployee.css">
+{% endblock style %}
+
+{% block main %}
+	<section class="container-create-employee">
+		<h2 class="container-create-employee__title">{{ title }}</h2>
+		<form method="post" action="/addEmployee">
+			<input type="text" name="lastName" placeholder="Le nom de l'employé">
+			<input type="text" name="firstName" placeholder="Le prénom de l'employé">
+			<input type="text" name="mail" placeholder="L'adresse mail de l'employé">
+			<input type="password" name="password" placeholder="Le mot de passe de l'employé">
+			<input type="password" name="confirm" placeholder="Confirmer le mot de passe">
+			<input type="number" name="age" placeholder="L'âge de l'employé">
+			<input type="text" name="gender" placeholder="Le genre de l'employé">
+			<button type="submit">Ajouter votre employé</button>
+		</form>
+	</section>
+{% endblock main %}

@@ -1,0 +1,33 @@
+{% block style %}
+    <link rel="stylesheet" href="./assets/style/header.css">
+{% endblock %}
+
+<header class="container-header">
+	<h1 class="container-header__title">FlowRH</h1>
+	<nav class="container-header__nav">
+        <img class="nav__hamburger" alt='icon menu mobile' src='./assets/img/menu_mobile.png'>
+		<ul class="nav__menu">
+			{% if company %}
+                <li>
+                    <a href="./home">Accueil</a>
+                </li>
+                <li>
+                    <a href="./addEmployee">Ajouter un employé</a>
+                </li>
+                <li>
+                    <a href="./displayComputer">Gestion des ordinateurs</a>
+                </li>
+                <li>
+                    <a href="./logout">Se déconnecter</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="./createCompany">Inscrire une entreprise</a>
+                </li>
+                <li>
+                    <a href="./login">Se connecter</a>
+                </li>
+			{% endif %}
+		</ul>
+	</nav>
+</header>

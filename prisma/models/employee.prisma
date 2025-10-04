@@ -1,0 +1,12 @@
+model Employee {
+    id Int @id @default(autoincrement())
+    lastName String @db.VarChar(255)
+    firstName String @db.VarChar(255)
+    mail String @db.VarChar(255) @unique
+    password String @db.VarChar(255)
+    age Int? @db.Int 
+    gender String? @db.VarChar(255)
+    company Company @relation(fields: [companyId], references: [id])
+    companyId Int
+    computers Computer[]
+}

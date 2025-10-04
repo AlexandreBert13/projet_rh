@@ -1,0 +1,51 @@
+$white-color: #F4F7FA;
+$dark-blue : #03203E;
+
+.container-header {
+    background-color: $dark-blue;
+    height: 100vh;
+    width: 25%;
+
+    .container-header__title {
+        color: $white-color;
+        font-size: 2rem;
+        text-align: center;
+        padding : 2rem 2rem 0;
+    }
+
+    .container-header__nav {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+
+        .nav__hamburger {
+            display: none;
+            width: 30px;
+            height: 30px;
+            background:url('../img/menu_mobile.png') $white-color no-repeat center;
+            background-size: contain;
+            position: relative;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin: 1rem 0;
+
+                a {
+                    text-decoration: none;
+                    color: $white-color;
+                    font-size: 1.2rem;
+
+                    &:hover {
+                        border-bottom: 2px solid $white-color;
+                    }
+                }
+            }
+        }
+    }
+}

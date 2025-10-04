@@ -1,0 +1,15 @@
+{% extends "../layouts/base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="./assets/style/login.css">
+{% endblock style %}
+
+{% block main %}
+	<section class="container-login">
+		<h2 class="container-login__title">{{ title }}</h2>
+		<form method="post" action="/login">
+			<input {{ error ? "class='error-input'": ''}} type="number" maxlength="14" minlength="14" name="siret" placeholder="Votre numéro de Siret">
+			<input {{ error ? "class='error-input'": ''}} type="password" name="password" placeholder="Votre mot de passe">
+			{% if error %}<p class="error-message">{{ error.password }} {{error.siret}}</p>{% endif %}
+			<button type="submit">Se connecter</button>
+		</form>
+{% endblock main %}

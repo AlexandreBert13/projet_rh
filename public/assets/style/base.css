@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #F4F7FA;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  body .container-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  body .container-header .container-header__title {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: left;
+  }
+  body .container-header .container-header__nav {
+    margin-top: 0;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  body .container-header .container-header__nav .nav__menu {
+    display: none;
+    flex-direction: column;
+    background-color: #03203E;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  body .container-header .container-header__nav .nav__menu li {
+    margin: 1.3rem 0;
+  }
+  body .container-header .container-header__nav .nav__menu.active {
+    display: block;
+  }
+  body .container-header .nav__hamburger {
+    display: block !important;
+  }
+  body .container-login,
+  body .container-home,
+  body .container-computer,
+  body .container-employee,
+  body .container-add-employee,
+  body .container-create-employee,
+  body .container-create-company {
+    width: 100%;
+    padding: 1rem;
+  }
+  body .container-login ul,
+  body .container-home ul,
+  body .container-computer ul,
+  body .container-employee ul,
+  body .container-add-employee ul,
+  body .container-create-employee ul,
+  body .container-create-company ul {
+    font-size: 65%;
+  }
+  body .container-login ul li span,
+  body .container-home ul li span,
+  body .container-computer ul li span,
+  body .container-employee ul li span,
+  body .container-add-employee ul li span,
+  body .container-create-employee ul li span,
+  body .container-create-company ul li span {
+    width: 14% !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  body .container-login ul li .mail,
+  body .container-home ul li .mail,
+  body .container-computer ul li .mail,
+  body .container-employee ul li .mail,
+  body .container-add-employee ul li .mail,
+  body .container-create-employee ul li .mail,
+  body .container-create-company ul li .mail {
+    width: 26% !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  body .container-login .container-home__update-employee form,
+  body .container-login .container-home__add-computer form,
+  body .container-login .container-home__update-computer form,
+  body .container-home .container-home__update-employee form,
+  body .container-home .container-home__add-computer form,
+  body .container-home .container-home__update-computer form,
+  body .container-computer .container-home__update-employee form,
+  body .container-computer .container-home__add-computer form,
+  body .container-computer .container-home__update-computer form,
+  body .container-employee .container-home__update-employee form,
+  body .container-employee .container-home__add-computer form,
+  body .container-employee .container-home__update-computer form,
+  body .container-add-employee .container-home__update-employee form,
+  body .container-add-employee .container-home__add-computer form,
+  body .container-add-employee .container-home__update-computer form,
+  body .container-create-employee .container-home__update-employee form,
+  body .container-create-employee .container-home__add-computer form,
+  body .container-create-employee .container-home__update-computer form,
+  body .container-create-company .container-home__update-employee form,
+  body .container-create-company .container-home__add-computer form,
+  body .container-create-company .container-home__update-computer form {
+    left: 10% !important;
+  }
+  body .container-login .update-link,
+  body .container-home .update-link,
+  body .container-computer .update-link,
+  body .container-employee .update-link,
+  body .container-add-employee .update-link,
+  body .container-create-employee .update-link,
+  body .container-create-company .update-link {
+    font-size: 0;
+    background: url("../img/update.png") no-repeat center;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin: 0 5px;
+  }
+  body .container-login .delete-link,
+  body .container-home .delete-link,
+  body .container-computer .delete-link,
+  body .container-employee .delete-link,
+  body .container-add-employee .delete-link,
+  body .container-create-employee .delete-link,
+  body .container-create-company .delete-link {
+    font-size: 0;
+    background: url("../img/delete.png") no-repeat center;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+  body .container-computer ul li span {
+    width: 40% !important;
+  }
+}/*# sourceMappingURL=base.css.map */
