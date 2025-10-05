@@ -31,9 +31,8 @@ exports.addEmployee = async (req, res) => {
             throw error
         }
     } catch (error) {
-        res.render("pages/addEmployee.twig", {
-            title: "Ajouter un employé"
-        })
+        console.log(error);
+        res.redirect("/addEmployee")
     }
 }
 

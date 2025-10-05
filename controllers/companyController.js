@@ -29,6 +29,7 @@ exports.displayHome = async (req, res) => {
 }
 
 exports.createCompany = async (req, res) => {
+    console.log("Création demandée")
     try {
         if (req.body.password == req.body.confirm) {
             const company = await prisma.company.create({
@@ -48,6 +49,7 @@ exports.createCompany = async (req, res) => {
             }
         }
         else {
+            console.log("Les mots de passe ne correspondent pas")
             const error = new Error("Données non valides")
             error.confirm = error.message
             throw error
