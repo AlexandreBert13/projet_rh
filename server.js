@@ -1,6 +1,8 @@
+
+process.env.NOMDELAVARIABLE
 // set up d'express
 const express = require("express");
-
+require('dotenv').config() 
 // import des routes
 const companyRouter = require("./rooter/companyRouter");
 const employeeRouter = require("./rooter/employeeRouter");
@@ -30,6 +32,6 @@ app.use(companyRouter)
 app.use(employeeRouter)
 app.use(computerRouter)
 
-app.listen(3001, ()=> {
-    console.log("Ecoute sur le port 3001");
+app.listen(process.env.port, ()=> {
+    console.log("Ecoute sur le port de " + process.env.port);
 })
