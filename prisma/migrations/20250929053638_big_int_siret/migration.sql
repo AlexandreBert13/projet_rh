@@ -1,2 +1,2 @@
 -- AlterTable
-ALTER TABLE `company` MODIFY `siret` BIGINT NOT NULL;
+ALTER TABLE `Company` MODIFY `siret` BIGINT NOT NULL;

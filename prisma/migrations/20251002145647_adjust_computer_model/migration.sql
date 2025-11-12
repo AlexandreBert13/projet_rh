@@ -5,7 +5,7 @@
 
 */
 -- AlterTable
-ALTER TABLE `computer` ADD COLUMN `companyId` INTEGER NOT NULL;
+ALTER TABLE `Computer` ADD COLUMN `companyId` INTEGER NOT NULL;
 
 -- AddForeignKey
 ALTER TABLE `Computer` ADD CONSTRAINT `Computer_companyId_fkey` FOREIGN KEY (`companyId`) REFERENCES `Company`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -5,10 +5,10 @@
 
 */
 -- DropIndex
-DROP INDEX `Company_name_key` ON `company`;
+DROP INDEX `Company_name_key` ON `Company`;
 
 -- AlterTable
-ALTER TABLE `employee` ADD COLUMN `age` INTEGER NULL;
+ALTER TABLE `Employee` ADD COLUMN `age` INTEGER NULL;
 
 -- CreateIndex
 CREATE UNIQUE INDEX `Employee_mail_key` ON `Employee`(`mail`);
