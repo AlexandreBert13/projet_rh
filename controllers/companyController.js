@@ -9,7 +9,7 @@ exports.displayCreateCompany = (req, res) => {
 }
 
 exports.displayLogin = (req, res) => {
-    res.render("/pages/login.twig", {
+    res.render("pages/login.twig", {
         title: "Connexion"
     })
 }
