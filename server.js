@@ -32,6 +32,6 @@ app.use(companyRouter)
 app.use(employeeRouter)
 app.use(computerRouter)
 
-app.listen(process.env.port, ()=> {
-    console.log("Ecoute sur le port de " + process.env.port);
+app.listen(process.env.PORT, ()=> {
+    console.log("Ecoute sur le port de " + process.env.PORT);
 })
